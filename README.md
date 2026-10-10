@@ -2,7 +2,7 @@
 
 Kodi-Repository für Addons und Updates.
 
-[Reposeite](https://github.com/marbra00/marbra00_repo)
+[Reposeite](https://marbra00.github.io/marbra00_repo/)
 
 ## Momentan verfügbare Addons
 
@@ -31,7 +31,7 @@ Danach findest du die Addons unter **Aus Repository installieren → marbra00_re
 
 A Kodi repository for addons and updates.
 
-[Repository page](https://github.com/marbra00/marbra00_repo)
+[Repository page](https://marbra00.github.io/marbra00_repo/)
 
 ### Currently available addons
 

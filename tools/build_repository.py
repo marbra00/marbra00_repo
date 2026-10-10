@@ -133,6 +133,23 @@ def build(root=ROOT):
                         'zip': (folder / filename).relative_to(root).as_posix(), 'source': source_url})
         rows.append('<tr><td>' + escape(addon.get('name')) + '</td><td>' + escape(version) +
                     '</td><td><a href="' + escape(addon_id + '/' + filename, quote=True) + '">ZIP</a></td></tr>')
+
+    # Kodi's HTTP directory reader requires link text to match the relative filename.
+    kodi_source = site / 'kodi'
+    repository_filename = repository.get('id') + '-' + repository.get('version') + '.zip'
+    immutable_write(kodi_source / repository_filename, repository_bytes)
+    kodi_page = '''<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><title>marbras Repo</title></head>
+<body>
+<h1>marbras Repo</h1>
+<table><tr><td><a href="''' + escape(repository_filename, quote=True) + '">' + \
+        escape(repository_filename) + '</a></td><td>' + str(len(repository_bytes)) + ''' B</td></tr></table>
+</body>
+</html>
+'''
+    (kodi_source / 'index.html').write_bytes(kodi_page.encode('utf-8'))
+
     ET.indent(root_xml, space='    ')
     xml_bytes = ET.tostring(root_xml, encoding='utf-8', xml_declaration=True) + b'\n'
     site.mkdir(parents=True, exist_ok=True)

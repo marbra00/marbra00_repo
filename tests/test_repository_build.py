@@ -5,6 +5,7 @@ import importlib.util
 import io
 import json
 from pathlib import Path
+import re
 import shutil
 import tempfile
 import unittest
@@ -54,6 +55,34 @@ class RepositoryBuildTests(unittest.TestCase):
             builder.build(self.root)
         self.assertEqual(package.read_bytes(), original_zip)
         self.assertEqual((self.root / 'docs/addons.xml').read_bytes(), original_index)
+
+    def test_kodi_source_lists_the_repository_zip_with_a_downloadable_filename(self):
+        record = builder.build(self.root)[0]
+        package = self.root / record['zip']
+        source = self.root / 'docs/kodi'
+        page = (source / 'index.html').read_text(encoding='utf-8')
+        # Match the anchor and filename rules from Kodi 21's HTTPDirectory.cpp.
+        items = re.findall(r'<a href="([^"]*)"[^>]*>\s*(.*?)\s*</a>(.+?)(?=<a|</tr|$)',
+                           page, re.IGNORECASE)
+        self.assertEqual(len(items), 1)
+        href, label, _ = items[0]
+        self.assertEqual(label, href)
+        self.assertEqual(href, package.name)
+        self.assertEqual((source / href).read_bytes(), package.read_bytes())
+        original_page = (source / 'index.html').read_bytes()
+        builder.build(self.root)
+        self.assertEqual((source / 'index.html').read_bytes(), original_page)
+        self.assertEqual((source / href).read_bytes(), package.read_bytes())
+
+    def test_changed_existing_kodi_source_zip_is_rejected_without_overwriting(self):
+        record = builder.build(self.root)[0]
+        source_zip = self.root / 'docs/kodi' / Path(record['zip']).name
+        original_page = (source_zip.parent / 'index.html').read_bytes()
+        source_zip.write_bytes(b'Unexpected replacement')
+        with self.assertRaisesRegex(ValueError, 'Existing version differs'):
+            builder.build(self.root)
+        self.assertEqual(source_zip.read_bytes(), b'Unexpected replacement')
+        self.assertEqual((source_zip.parent / 'index.html').read_bytes(), original_page)
 
     def test_selected_package_with_wrong_checksum_is_rejected(self):
         package = self.root / 'docs/plugin.video.example/plugin.video.example-1.0.0.zip'

@@ -1,4 +1,4 @@
-# marbras Repo
+# marbra00 Repo
 
 Kodi-Repository für Addons und Updates.
 
@@ -18,8 +18,8 @@ Kodi-Repository für Addons und Updates.
    https://marbra00.github.io/marbra00_repo/kodi/
    ```
 
-2. Gib der Quelle den Namen **marbras Repo**.
-3. Öffne **Add-ons → Paket-Symbol → Aus ZIP-Datei installieren → marbras Repo** und wähle die Repository-ZIP.
+2. Gib der Quelle den Namen **marbra00 Repo**.
+3. Öffne **Add-ons → Paket-Symbol → Aus ZIP-Datei installieren → marbra00 Repo** und wähle die Repository-ZIP.
 
 **Alternativ:** Lade die Repository-ZIP unter [Releases](https://github.com/marbra00/marbra00_repo/releases) herunter und installiere sie in Kodi über **Aus ZIP-Datei installieren**.
 
@@ -47,8 +47,8 @@ A Kodi repository for addons and updates.
    https://marbra00.github.io/marbra00_repo/kodi/
    ```
 
-2. Name the source **marbras Repo**.
-3. Open **Add-ons → package icon → Install from ZIP file → marbras Repo** and select the repository ZIP.
+2. Name the source **marbra00 Repo**.
+3. Open **Add-ons → package icon → Install from ZIP file → marbra00 Repo** and select the repository ZIP.
 
 **Alternatively:** Download the repository ZIP from [Releases](https://github.com/marbra00/marbra00_repo/releases) and install it in Kodi via **Install from ZIP file**.
 

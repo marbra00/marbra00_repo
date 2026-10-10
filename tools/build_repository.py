@@ -140,9 +140,9 @@ def build(root=ROOT):
     immutable_write(kodi_source / repository_filename, repository_bytes)
     kodi_page = '''<!doctype html>
 <html lang="de">
-<head><meta charset="utf-8"><title>marbras Repo</title></head>
+<head><meta charset="utf-8"><title>marbra00 Repo</title></head>
 <body>
-<h1>marbras Repo</h1>
+<h1>marbra00 Repo</h1>
 <table><tr><td><a href="''' + escape(repository_filename, quote=True) + '">' + \
         escape(repository_filename) + '</a></td><td>' + str(len(repository_bytes)) + ''' B</td></tr></table>
 </body>

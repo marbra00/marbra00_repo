@@ -14,8 +14,8 @@
     <extension point="xbmc.addon.metadata">
         <summary lang="de_DE">Addons und Updates aus marbra00_repo</summary>
         <summary lang="en_GB">Addons and updates from marbra00_repo</summary>
-        <description lang="de_DE">Unabhängig gepflegtes Repository von marbra00 zum Installieren und Aktualisieren von Kodi-Addons.</description>
-        <description lang="en_GB">An independently maintained repository by marbra00 for installing and updating Kodi addons.</description>
+        <description lang="de_DE">Repo von marbra00</description>
+        <description lang="en_GB">Repo by marbra00</description>
         <disclaimer lang="de_DE">Inoffizielles Repository. Nicht mit Team Kodi verbunden.</disclaimer>
         <disclaimer lang="en_GB">Unofficial repository. Not affiliated with Team Kodi.</disclaimer>
         <platform>all</platform>

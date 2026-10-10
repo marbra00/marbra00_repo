@@ -1,0 +1,2 @@
+1.0.0 - 10 Oct 2026
+ - Initial Kodi addon repository.

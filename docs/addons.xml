@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons>
+    <addon id="repository.marbra00_repo" name="marbra00_repo" version="1.0.0" provider-name="marbra00">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0" />
+        </requires>
+        <extension point="xbmc.addon.repository">
+            <dir minversion="19.0.0">
+                <info compressed="false">https://marbra00.github.io/marbra00_repo/addons.xml</info>
+                <checksum verify="sha256">https://marbra00.github.io/marbra00_repo/addons.xml.sha256</checksum>
+                <datadir>https://marbra00.github.io/marbra00_repo/</datadir>
+                <hashes>false</hashes>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="de_DE">Addons und Updates aus marbra00_repo</summary>
+            <summary lang="en_GB">Addons and updates from marbra00_repo</summary>
+            <description lang="de_DE">Unabhängig gepflegtes Repository von marbra00 zum Installieren und Aktualisieren von Kodi-Addons.</description>
+            <description lang="en_GB">An independently maintained repository by marbra00 for installing and updating Kodi addons.</description>
+            <disclaimer lang="de_DE">Inoffizielles Repository. Nicht mit Team Kodi verbunden.</disclaimer>
+            <disclaimer lang="en_GB">Unofficial repository. Not affiliated with Team Kodi.</disclaimer>
+            <platform>all</platform>
+            <license>GPL-3.0-or-later</license>
+            <source>https://github.com/marbra00/marbra00_repo</source>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+        </extension>
+    </addon>
+    <addon id="plugin.video.dailymotion_unofficial" name="Dailymotion – Unofficial" version="1.0.0" provider-name="gujal, marbra00">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+            <import addon="script.module.six" version="0.0.1" />
+            <import addon="script.module.kodi-six" version="0.0.1" />
+        </requires>
+        <extension point="xbmc.python.pluginsource" library="default.py">
+            <provides>video</provides>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <platform>all</platform>
+            <summary lang="de_DE">Filme, TV, Musik, User-Clips und Live-Streams</summary>
+            <summary lang="en_GB">Movies, TV, Music, User-Clips, and Livestreams</summary>
+            <summary lang="fr_FR">Films, Séries TV, Musique, Clips, et Live</summary>
+            <summary lang="he_IL">סרטים, טלוויזיה, מוסיקה, סירטונים של המשתמש, תלת מימד והזרמה חיה</summary>
+            <description lang="de_DE">Inoffizieller Fork des Dailymotion-Addons von gujal, der unabhängig weitergepflegt wird.</description>
+            <description lang="en_GB">An unofficial fork of gujal's Dailymotion addon, maintained independently.</description>
+            <description lang="fr_FR">Fork non officiel de l’extension Dailymotion de gujal, maintenu de manière indépendante.</description>
+            <description lang="he_IL">גרסה נגזרת לא רשמית של תוסף Dailymotion מאת gujal, המתוחזקת באופן עצמאי.</description>
+            <disclaimer lang="de_DE">Einige Teile dieses Addons sind in Ihrem Wohnsitzland möglicherweise nicht legal. Bitte informieren Sie sich vor der Installation bei den örtlichen Gesetzen.</disclaimer>
+            <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+            <disclaimer lang="fr_FR">Certaines parties de cet addon peuvent ne pas être légales dans votre pays de résidence - s’il vous plaît vérifier avec vos lois locales avant d’installer.</disclaimer>
+            <disclaimer lang="he_IL">ייתכן שחלק מהתוספות האלו אינן חוקיות בארץ המגורים שלך - אנא בדוק את החוקים המקומיים שלך לפני ההתקנה.</disclaimer>
+            <website>https://www.dailymotion.com</website>
+            <source>https://github.com/marbra00/Dailymotion-Unofficial</source>
+            <license>GPL-3.0-or-later</license>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+                <screenshot>resources/images/screenshot-01.jpg</screenshot>
+                <screenshot>resources/images/screenshot-02.jpg</screenshot>
+                <screenshot>resources/images/screenshot-03.jpg</screenshot>
+            </assets>
+        </extension>
+    </addon>
+</addons>
